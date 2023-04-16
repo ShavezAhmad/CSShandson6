@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background-image: url("./images/sahara_desert.jpg");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.container{
+    width:100%;
+    margin: auto;
+    max-width: 1140px;
+}
+.header{
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+.menu{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.menu ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0px 20px;
+    padding: 0px 10px;
+}
+.menu img{
+    height: 30px;
+    width: 30px;
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+}
+.lbox{
+    margin: auto 0;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.lbox p {
+    line-height: 1.5;
+}
+h1{
+    font-size: 70px;
+}
+.button{
+    width:200px;
+    height:40px;
+    background-color: white;
+    color:black;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 40px;
+    margin-top: 10px;
+}
+.rbox{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    row-gap: 10px;
+    column-gap: 40px;
+    height: 500px;
+    width: 80%;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+.rbox .innerbox{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    color:white;
+}
+.innerbox h5{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.innerbox p{
+    font-size: 12px;
+    line-height: 1.5;
+}
+.rbox .innerbox:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.bg1{
+    background-image: url("./images/pic-1.png");
+}
+.bg2{
+    background-image: url("./images/pic-2.png");
+}
+.bg3{
+    background-image: url("./images/pic-3.png");
+}
+.bg4{
+    background-image: url("./images/pic-4.png");
+}
+
+/* tablet view */
+@media screen and (min-width :500px) and (max-width:900px){
+    .container{
+        max-width:800px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    body{
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+        height: 100%;
+
+    }
+    h1{
+        font-size: 40px;
+    }
+    .lbox{
+        gap:0;
+    }
+    .rbox{
+        margin-top: 10px;
+        grid-template-columns: 450px;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        row-gap: 20px; 
+    }
+    .banner{
+        margin-top: -25px;
+        flex-direction: column;
+        gap:20px;
+    }
+    .rbox .innerbox{
+        background-position: center;
+    }
+    .innerbox p{
+        font-size: 10px;
+    }   
+}
+
+/* Mobile View */
+@media screen and (min-width :280px) and (max-width:500px) {
+    body{
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+        height: 100%;
+
+    }
+    .container{
+        max-width:300px;
+    }
+    .logo img{
+        height:40px;
+        width: 40px;
+    }
+    .menu ul li{
+        display: block;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .banner{
+        margin-top: -25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+    }
+
+    .rbox{
+        margin-top: 5px;
+        grid-template-columns: auto;
+
+    }
+    .rbox .innerbox{
+        background-position: center;
+    }
+    .innerbox p{
+        font-size: 10px;
+    }  
+}
